@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'> <!-- Estilo de letra -->
+    <title>Hagman</title>
+</head>
+<body>
+    <header>
+        <a href="https://www.aluracursos.com/" target="_blank"><img class="logo" src="./images/logo.svg" alt=""></a>
+    </header>
+    <main>
+        <div class="first-buttons-group" id="first-buttons-group">
+            <button class="start-button" id="start-button">Start game</button>
+            <button class="new-word-button" id="new-word-button">Write a word</button>
+        </div>
+
+        <div class="hangman-board" id="hangman-board">
+            <canvas class="hangman-canvas" id="hangman-canvas" width="1366" height="450">Your browser does not support the canvas element.</canvas>
+            <div class="second-buttons-group" id="second-buttons-group">
+                <button class="new-game-button" id="new-game-button">New game</button>
+                <button class="desist-button" id="desist-button">Desist</button>
+            </div>
+        </div>
+
+        <div class="new-word" id="new-word">
+            <textarea class="new-word-input" id="new-word-input" name="" type="text" placeholder="Type a word" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" onkeyup="this.value = this.value.toUpperCase();"></textarea>
+            <p class="info" id="info"><img src="./images/info.svg" alt="">Max. 10 characters</p>
+            <div class="third-buttons-group" id="third-buttons-group">
+                <button class="new-word-add" id="new-word-add">Add</button>
+                <button class="new-word-cancel" id="new-word-cancel">Cancel</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
