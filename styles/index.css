@@ -91,6 +91,7 @@ header {
 
             .second-buttons-group {
                 display: flex;
+                align-items: center;
                 justify-content: center;
 
                 width: 70%;
