@@ -58,6 +58,7 @@ function randomWOrd() {
         archivoTxt.send(null);
         var txt = archivoTxt.responseText;
         wordList = txt.split(/\r\n/);
+        console.log(wordList);
         answer = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
     }
     checkIfAddWord = false;
@@ -130,7 +131,6 @@ function checkIfLetterInAnswer(letter) {
             }
 
             currentWordString = currentWord.join('');
-            console.log(currentWordString);
 
             if (currentWordString == answer) {
                 youWin();
@@ -250,7 +250,6 @@ function desist() {
 function addWord() {
     newPersonalWord = '';
     newPersonalWord = document.getElementById("new-word-input").value.toUpperCase();
-    console.log(newPersonalWord);
 
     if(newPersonalWord.length > 0 && newPersonalWord.length <= 10) {
         checkIfAddWord = true;
