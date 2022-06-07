@@ -57,7 +57,7 @@ function randomWOrd() {
         archivoTxt.open('GET', fileRuta, false);
         archivoTxt.send(null);
         var txt = archivoTxt.responseText;
-        wordList = txt.split(/\r\n/);
+        wordList = txt.split("\n");
         console.log(wordList);
         answer = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
     }
